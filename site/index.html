@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A Python project that scrapes, cleans, validates, and consolidates data from Books to Scrape and Quotes to Scrape.">
+  <title>Multi-Source Web Scraping | Project Overview</title>
+  <style>
+    :root { color-scheme: light; --ink: #172033; --muted: #5f6b7a; --blue: #2457c5; --line: #e4e9f1; --panel: #f5f8fc; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.6 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .hero { background: linear-gradient(135deg, #10234a, #2457c5); color: white; padding: 64px 24px 58px; }
+    .wrap { width: min(100% - 40px, 1040px); margin-inline: auto; }
+    .eyebrow { color: #c6d7ff; font-size: .78rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { max-width: 760px; margin: 12px 0; font-size: clamp(2rem, 5vw, 3.25rem); line-height: 1.12; letter-spacing: -.035em; }
+    .hero p { max-width: 720px; margin: 16px 0 0; color: #e2eaff; font-size: 1.08rem; }
+    main { padding: 36px 0 64px; }
+    h2 { margin: 0 0 14px; font-size: 1.45rem; letter-spacing: -.02em; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 34px; }
+    .stat, .card { border: 1px solid var(--line); border-radius: 14px; background: white; padding: 20px; }
+    .stat { background: var(--panel); }
+    .stat strong { display: block; font-size: 1.8rem; line-height: 1.2; }
+    .stat span { color: var(--muted); font-size: .9rem; }
+    .grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+    .card p { margin: 0; color: var(--muted); }
+    .sources { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .pill { border-radius: 999px; background: #edf3ff; color: #21499b; padding: 6px 12px; font-size: .88rem; font-weight: 650; }
+    .flow { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .flow li { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; color: #344054; font-size: .88rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .button { display: inline-block; border-radius: 9px; background: var(--blue); color: white; padding: 11px 16px; text-decoration: none; font-weight: 700; }
+    .button.secondary { border: 1px solid var(--line); background: white; color: var(--ink); }
+    .note { margin-top: 18px; color: var(--muted); font-size: .88rem; }
+    footer { border-top: 1px solid var(--line); padding: 20px 0; color: var(--muted); font-size: .86rem; }
+    @media (max-width: 680px) { .stats { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr; } .hero { padding-top: 48px; } }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Python · Web scraping · Data processing</div>
+      <h1>Multi-Source Web Scraping &amp; Data Consolidation</h1>
+      <p>A lightweight Python ETL project that collects public practice data, standardizes it into one schema, validates records, detects duplicates, and exports reviewable results.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section aria-labelledby="results-title">
+      <h2 id="results-title">Latest published run</h2>
+      <div class="stats">
+        <div class="stat"><strong id="final-count">—</strong><span>unique records in the dataset</span></div>
+        <div class="stat"><strong id="raw-count">—</strong><span>records collected across both sources</span></div>
+        <div class="stat"><strong id="duplicate-count">—</strong><span>duplicates removed</span></div>
+      </div>
+    </section>
+
+    <div class="grid">
+      <section class="card" aria-labelledby="about-title">
+        <h2 id="about-title">Project overview</h2>
+        <p>The two sites expose different record types. The pipeline maps books and quotes into a shared CSV structure while leaving fields empty when they do not apply. Pagination follows each site's “Next” link; the scraper uses a shared Requests session, retries temporary HTTP failures, and logs page progress.</p>
+        <div class="sources" aria-label="Data sources">
+          <span class="pill">Books to Scrape</span>
+          <span class="pill">Quotes to Scrape</span>
+        </div>
+      </section>
+      <section class="card" aria-labelledby="pipeline-title">
+        <h2 id="pipeline-title">Processing pipeline</h2>
+        <p>Source-specific parsing is kept separate from reusable data processing.</p>
+        <ol class="flow">
+          <li>Scrape</li><li>Clean</li><li>Validate</li><li>Deduplicate</li><li>Consolidate</li><li>Export</li>
+        </ol>
+        <p class="note">Built with Python, Requests, Beautiful Soup, and the Python standard library.</p>
+      </section>
+    </div>
+
+    <nav class="links" aria-label="Project outputs">
+      <a class="button" href="final_dataset.csv" download>Download consolidated CSV</a>
+      <a class="button secondary" href="summary_report.json">View summary report</a>
+    </nav>
+    <p class="note" id="run-time">Summary metrics are loaded from the published JSON report.</p>
+  </main>
+
+  <footer><div class="wrap">Educational take-home project · Static, read-only results page</div></footer>
+
+  <script>
+    fetch("summary_report.json")
+      .then(response => {
+        if (!response.ok) throw new Error("Summary report is unavailable");
+        return response.json();
+      })
+      .then(report => {
+        const raw = Object.values(report.raw_records_collected_per_source || {}).reduce((sum, value) => sum + value, 0);
+        document.getElementById("final-count").textContent = report.final_record_count ?? "—";
+        document.getElementById("raw-count").textContent = raw;
+        document.getElementById("duplicate-count").textContent = report.duplicate_count ?? "—";
+        if (report.end_time) {
+          const date = new Date(report.end_time);
+          document.getElementById("run-time").textContent = `Run completed ${date.toLocaleString()}. Metrics are read from the published summary report.`;
+        }
+      })
+      .catch(() => {
+        document.getElementById("run-time").textContent = "Open the summary report for the latest run metrics.";
+      });
+  </script>
+</body>
+</html>
