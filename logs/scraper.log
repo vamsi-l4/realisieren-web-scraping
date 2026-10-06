@@ -1,137 +1,63 @@
-2026-10-06 19:49:21,090 WARNING urllib3.connectionpool: Retrying (Retry(total=2, connect=2, read=3, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE47D2B0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /
-2026-10-06 19:49:22,092 WARNING urllib3.connectionpool: Retrying (Retry(total=1, connect=1, read=3, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE435950>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /
-2026-10-06 19:49:24,178 WARNING urllib3.connectionpool: Retrying (Retry(total=0, connect=0, read=3, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE435A90>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /
-2026-10-06 19:49:24,186 ERROR scrapers.base_scraper: Request failed for https://books.toscrape.com/: HTTPSConnectionPool(host='books.toscrape.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE435BD0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
-2026-10-06 19:49:24,186 INFO __main__: Collected 0 raw records from Books to Scrape
-2026-10-06 19:49:24,539 WARNING urllib3.connectionpool: Retrying (Retry(total=2, connect=2, read=3, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE435450>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /
-2026-10-06 19:49:25,571 WARNING urllib3.connectionpool: Retrying (Retry(total=1, connect=1, read=3, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE435090>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /
-2026-10-06 19:49:27,577 WARNING urllib3.connectionpool: Retrying (Retry(total=0, connect=0, read=3, redirect=None, status=3)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE4356D0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /
-2026-10-06 19:49:27,579 ERROR scrapers.base_scraper: Request failed for https://quotes.toscrape.com/: HTTPSConnectionPool(host='quotes.toscrape.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001EDDE435950>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions'))
-2026-10-06 19:49:27,579 INFO __main__: Collected 0 raw records from Quotes to Scrape
-2026-10-06 19:49:27,617 INFO __main__: Finished: 0 final records, 0 rejected, 0 duplicates
-2026-10-06 19:49:37,541 INFO scrapers.books_scraper: Processing books page 1: https://books.toscrape.com/
-2026-10-06 19:49:38,427 INFO scrapers.books_scraper: Processing books page 2: https://books.toscrape.com/catalogue/page-2.html
-2026-10-06 19:49:39,371 INFO scrapers.books_scraper: Processing books page 3: https://books.toscrape.com/catalogue/page-3.html
-2026-10-06 19:49:40,330 INFO scrapers.books_scraper: Processing books page 4: https://books.toscrape.com/catalogue/page-4.html
-2026-10-06 19:49:41,207 INFO scrapers.books_scraper: Processing books page 5: https://books.toscrape.com/catalogue/page-5.html
-2026-10-06 19:49:42,092 INFO scrapers.books_scraper: Processing books page 6: https://books.toscrape.com/catalogue/page-6.html
-2026-10-06 19:49:43,325 INFO scrapers.books_scraper: Processing books page 7: https://books.toscrape.com/catalogue/page-7.html
-2026-10-06 19:49:44,329 INFO scrapers.books_scraper: Processing books page 8: https://books.toscrape.com/catalogue/page-8.html
-2026-10-06 19:49:45,607 INFO scrapers.books_scraper: Processing books page 9: https://books.toscrape.com/catalogue/page-9.html
-2026-10-06 19:49:46,888 INFO scrapers.books_scraper: Processing books page 10: https://books.toscrape.com/catalogue/page-10.html
-2026-10-06 19:49:47,855 INFO scrapers.books_scraper: Processing books page 11: https://books.toscrape.com/catalogue/page-11.html
-2026-10-06 19:49:48,812 INFO scrapers.books_scraper: Processing books page 12: https://books.toscrape.com/catalogue/page-12.html
-2026-10-06 19:49:49,994 INFO scrapers.books_scraper: Processing books page 13: https://books.toscrape.com/catalogue/page-13.html
-2026-10-06 19:49:51,208 INFO scrapers.books_scraper: Processing books page 14: https://books.toscrape.com/catalogue/page-14.html
-2026-10-06 19:49:52,178 INFO scrapers.books_scraper: Processing books page 15: https://books.toscrape.com/catalogue/page-15.html
-2026-10-06 19:49:53,449 INFO scrapers.books_scraper: Processing books page 16: https://books.toscrape.com/catalogue/page-16.html
-2026-10-06 19:49:54,337 INFO scrapers.books_scraper: Processing books page 17: https://books.toscrape.com/catalogue/page-17.html
-2026-10-06 19:49:55,533 INFO scrapers.books_scraper: Processing books page 18: https://books.toscrape.com/catalogue/page-18.html
-2026-10-06 19:49:56,730 INFO scrapers.books_scraper: Processing books page 19: https://books.toscrape.com/catalogue/page-19.html
-2026-10-06 19:49:57,915 INFO scrapers.books_scraper: Processing books page 20: https://books.toscrape.com/catalogue/page-20.html
-2026-10-06 19:49:59,104 INFO scrapers.books_scraper: Processing books page 21: https://books.toscrape.com/catalogue/page-21.html
-2026-10-06 19:50:00,343 INFO scrapers.books_scraper: Processing books page 22: https://books.toscrape.com/catalogue/page-22.html
-2026-10-06 19:50:01,610 INFO scrapers.books_scraper: Processing books page 23: https://books.toscrape.com/catalogue/page-23.html
-2026-10-06 19:50:02,892 INFO scrapers.books_scraper: Processing books page 24: https://books.toscrape.com/catalogue/page-24.html
-2026-10-06 19:50:04,086 INFO scrapers.books_scraper: Processing books page 25: https://books.toscrape.com/catalogue/page-25.html
-2026-10-06 19:50:05,287 INFO scrapers.books_scraper: Processing books page 26: https://books.toscrape.com/catalogue/page-26.html
-2026-10-06 19:50:06,568 INFO scrapers.books_scraper: Processing books page 27: https://books.toscrape.com/catalogue/page-27.html
-2026-10-06 19:50:07,737 INFO scrapers.books_scraper: Processing books page 28: https://books.toscrape.com/catalogue/page-28.html
-2026-10-06 19:50:08,967 INFO scrapers.books_scraper: Processing books page 29: https://books.toscrape.com/catalogue/page-29.html
-2026-10-06 19:50:10,264 INFO scrapers.books_scraper: Processing books page 30: https://books.toscrape.com/catalogue/page-30.html
-2026-10-06 19:50:11,474 INFO scrapers.books_scraper: Processing books page 31: https://books.toscrape.com/catalogue/page-31.html
-2026-10-06 19:50:12,642 INFO scrapers.books_scraper: Processing books page 32: https://books.toscrape.com/catalogue/page-32.html
-2026-10-06 19:50:13,930 INFO scrapers.books_scraper: Processing books page 33: https://books.toscrape.com/catalogue/page-33.html
-2026-10-06 19:50:15,219 INFO scrapers.books_scraper: Processing books page 34: https://books.toscrape.com/catalogue/page-34.html
-2026-10-06 19:50:16,402 INFO scrapers.books_scraper: Processing books page 35: https://books.toscrape.com/catalogue/page-35.html
-2026-10-06 19:50:17,616 INFO scrapers.books_scraper: Processing books page 36: https://books.toscrape.com/catalogue/page-36.html
-2026-10-06 19:50:18,908 INFO scrapers.books_scraper: Processing books page 37: https://books.toscrape.com/catalogue/page-37.html
-2026-10-06 19:50:20,171 INFO scrapers.books_scraper: Processing books page 38: https://books.toscrape.com/catalogue/page-38.html
-2026-10-06 19:50:21,448 INFO scrapers.books_scraper: Processing books page 39: https://books.toscrape.com/catalogue/page-39.html
-2026-10-06 19:50:22,733 INFO scrapers.books_scraper: Processing books page 40: https://books.toscrape.com/catalogue/page-40.html
-2026-10-06 19:50:24,177 INFO scrapers.books_scraper: Processing books page 41: https://books.toscrape.com/catalogue/page-41.html
-2026-10-06 19:50:25,447 INFO scrapers.books_scraper: Processing books page 42: https://books.toscrape.com/catalogue/page-42.html
-2026-10-06 19:50:26,750 INFO scrapers.books_scraper: Processing books page 43: https://books.toscrape.com/catalogue/page-43.html
-2026-10-06 19:50:28,041 INFO scrapers.books_scraper: Processing books page 44: https://books.toscrape.com/catalogue/page-44.html
-2026-10-06 19:50:29,289 INFO scrapers.books_scraper: Processing books page 45: https://books.toscrape.com/catalogue/page-45.html
-2026-10-06 19:50:30,570 INFO scrapers.books_scraper: Processing books page 46: https://books.toscrape.com/catalogue/page-46.html
-2026-10-06 19:50:31,777 INFO scrapers.books_scraper: Processing books page 47: https://books.toscrape.com/catalogue/page-47.html
-2026-10-06 19:50:32,996 INFO scrapers.books_scraper: Processing books page 48: https://books.toscrape.com/catalogue/page-48.html
-2026-10-06 19:50:34,165 INFO scrapers.books_scraper: Processing books page 49: https://books.toscrape.com/catalogue/page-49.html
-2026-10-06 19:50:35,368 INFO scrapers.books_scraper: Processing books page 50: https://books.toscrape.com/catalogue/page-50.html
-2026-10-06 19:50:35,372 INFO __main__: Collected 1000 raw records from Books to Scrape
-2026-10-06 19:50:36,824 INFO scrapers.quotes_scraper: Processing quotes page 1: https://quotes.toscrape.com/
-2026-10-06 19:50:37,759 INFO scrapers.quotes_scraper: Processing quotes page 2: https://quotes.toscrape.com/page/2/
-2026-10-06 19:50:38,722 INFO scrapers.quotes_scraper: Processing quotes page 3: https://quotes.toscrape.com/page/3/
-2026-10-06 19:50:39,622 INFO scrapers.quotes_scraper: Processing quotes page 4: https://quotes.toscrape.com/page/4/
-2026-10-06 19:50:40,480 INFO scrapers.quotes_scraper: Processing quotes page 5: https://quotes.toscrape.com/page/5/
-2026-10-06 19:50:41,448 INFO scrapers.quotes_scraper: Processing quotes page 6: https://quotes.toscrape.com/page/6/
-2026-10-06 19:50:42,376 INFO scrapers.quotes_scraper: Processing quotes page 7: https://quotes.toscrape.com/page/7/
-2026-10-06 19:50:43,362 INFO scrapers.quotes_scraper: Processing quotes page 8: https://quotes.toscrape.com/page/8/
-2026-10-06 19:50:44,323 INFO scrapers.quotes_scraper: Processing quotes page 9: https://quotes.toscrape.com/page/9/
-2026-10-06 19:50:45,181 INFO scrapers.quotes_scraper: Processing quotes page 10: https://quotes.toscrape.com/page/10/
-2026-10-06 19:50:45,183 INFO __main__: Collected 100 raw records from Quotes to Scrape
-2026-10-06 19:50:45,216 INFO __main__: Finished: 1099 final records, 0 rejected, 1 duplicates
-2026-10-06 19:54:52,811 INFO scrapers.books_scraper: Processing books page 1: https://books.toscrape.com/
-2026-10-06 19:54:54,095 INFO scrapers.books_scraper: Processing books page 2: https://books.toscrape.com/catalogue/page-2.html
-2026-10-06 19:54:55,379 INFO scrapers.books_scraper: Processing books page 3: https://books.toscrape.com/catalogue/page-3.html
-2026-10-06 19:54:56,645 INFO scrapers.books_scraper: Processing books page 4: https://books.toscrape.com/catalogue/page-4.html
-2026-10-06 19:54:57,870 INFO scrapers.books_scraper: Processing books page 5: https://books.toscrape.com/catalogue/page-5.html
-2026-10-06 19:54:59,054 INFO scrapers.books_scraper: Processing books page 6: https://books.toscrape.com/catalogue/page-6.html
-2026-10-06 19:55:00,324 INFO scrapers.books_scraper: Processing books page 7: https://books.toscrape.com/catalogue/page-7.html
-2026-10-06 19:55:01,615 INFO scrapers.books_scraper: Processing books page 8: https://books.toscrape.com/catalogue/page-8.html
-2026-10-06 19:55:02,894 INFO scrapers.books_scraper: Processing books page 9: https://books.toscrape.com/catalogue/page-9.html
-2026-10-06 19:55:04,175 INFO scrapers.books_scraper: Processing books page 10: https://books.toscrape.com/catalogue/page-10.html
-2026-10-06 19:55:05,458 INFO scrapers.books_scraper: Processing books page 11: https://books.toscrape.com/catalogue/page-11.html
-2026-10-06 19:55:06,720 INFO scrapers.books_scraper: Processing books page 12: https://books.toscrape.com/catalogue/page-12.html
-2026-10-06 19:55:08,019 INFO scrapers.books_scraper: Processing books page 13: https://books.toscrape.com/catalogue/page-13.html
-2026-10-06 19:55:09,200 INFO scrapers.books_scraper: Processing books page 14: https://books.toscrape.com/catalogue/page-14.html
-2026-10-06 19:55:10,417 INFO scrapers.books_scraper: Processing books page 15: https://books.toscrape.com/catalogue/page-15.html
-2026-10-06 19:55:11,695 INFO scrapers.books_scraper: Processing books page 16: https://books.toscrape.com/catalogue/page-16.html
-2026-10-06 19:55:12,974 INFO scrapers.books_scraper: Processing books page 17: https://books.toscrape.com/catalogue/page-17.html
-2026-10-06 19:55:14,256 INFO scrapers.books_scraper: Processing books page 18: https://books.toscrape.com/catalogue/page-18.html
-2026-10-06 19:55:15,540 INFO scrapers.books_scraper: Processing books page 19: https://books.toscrape.com/catalogue/page-19.html
-2026-10-06 19:55:16,817 INFO scrapers.books_scraper: Processing books page 20: https://books.toscrape.com/catalogue/page-20.html
-2026-10-06 19:55:18,100 INFO scrapers.books_scraper: Processing books page 21: https://books.toscrape.com/catalogue/page-21.html
-2026-10-06 19:55:19,266 INFO scrapers.books_scraper: Processing books page 22: https://books.toscrape.com/catalogue/page-22.html
-2026-10-06 19:55:20,504 INFO scrapers.books_scraper: Processing books page 23: https://books.toscrape.com/catalogue/page-23.html
-2026-10-06 19:55:21,768 INFO scrapers.books_scraper: Processing books page 24: https://books.toscrape.com/catalogue/page-24.html
-2026-10-06 19:55:22,928 INFO scrapers.books_scraper: Processing books page 25: https://books.toscrape.com/catalogue/page-25.html
-2026-10-06 19:55:24,073 INFO scrapers.books_scraper: Processing books page 26: https://books.toscrape.com/catalogue/page-26.html
-2026-10-06 19:55:25,229 INFO scrapers.books_scraper: Processing books page 27: https://books.toscrape.com/catalogue/page-27.html
-2026-10-06 19:55:26,368 INFO scrapers.books_scraper: Processing books page 28: https://books.toscrape.com/catalogue/page-28.html
-2026-10-06 19:55:27,519 INFO scrapers.books_scraper: Processing books page 29: https://books.toscrape.com/catalogue/page-29.html
-2026-10-06 19:55:28,651 INFO scrapers.books_scraper: Processing books page 30: https://books.toscrape.com/catalogue/page-30.html
-2026-10-06 19:55:29,936 INFO scrapers.books_scraper: Processing books page 31: https://books.toscrape.com/catalogue/page-31.html
-2026-10-06 19:55:31,147 INFO scrapers.books_scraper: Processing books page 32: https://books.toscrape.com/catalogue/page-32.html
-2026-10-06 19:55:32,305 INFO scrapers.books_scraper: Processing books page 33: https://books.toscrape.com/catalogue/page-33.html
-2026-10-06 19:55:33,458 INFO scrapers.books_scraper: Processing books page 34: https://books.toscrape.com/catalogue/page-34.html
-2026-10-06 19:55:34,735 INFO scrapers.books_scraper: Processing books page 35: https://books.toscrape.com/catalogue/page-35.html
-2026-10-06 19:55:36,173 INFO scrapers.books_scraper: Processing books page 36: https://books.toscrape.com/catalogue/page-36.html
-2026-10-06 19:55:37,441 INFO scrapers.books_scraper: Processing books page 37: https://books.toscrape.com/catalogue/page-37.html
-2026-10-06 19:55:38,729 INFO scrapers.books_scraper: Processing books page 38: https://books.toscrape.com/catalogue/page-38.html
-2026-10-06 19:55:39,888 INFO scrapers.books_scraper: Processing books page 39: https://books.toscrape.com/catalogue/page-39.html
-2026-10-06 19:55:41,138 INFO scrapers.books_scraper: Processing books page 40: https://books.toscrape.com/catalogue/page-40.html
-2026-10-06 19:55:42,415 INFO scrapers.books_scraper: Processing books page 41: https://books.toscrape.com/catalogue/page-41.html
-2026-10-06 19:55:43,588 INFO scrapers.books_scraper: Processing books page 42: https://books.toscrape.com/catalogue/page-42.html
-2026-10-06 19:55:44,803 INFO scrapers.books_scraper: Processing books page 43: https://books.toscrape.com/catalogue/page-43.html
-2026-10-06 19:55:46,121 INFO scrapers.books_scraper: Processing books page 44: https://books.toscrape.com/catalogue/page-44.html
-2026-10-06 19:55:47,345 INFO scrapers.books_scraper: Processing books page 45: https://books.toscrape.com/catalogue/page-45.html
-2026-10-06 19:55:48,657 INFO scrapers.books_scraper: Processing books page 46: https://books.toscrape.com/catalogue/page-46.html
-2026-10-06 19:55:49,945 INFO scrapers.books_scraper: Processing books page 47: https://books.toscrape.com/catalogue/page-47.html
-2026-10-06 19:55:51,107 INFO scrapers.books_scraper: Processing books page 48: https://books.toscrape.com/catalogue/page-48.html
-2026-10-06 19:55:52,316 INFO scrapers.books_scraper: Processing books page 49: https://books.toscrape.com/catalogue/page-49.html
-2026-10-06 19:55:53,480 INFO scrapers.books_scraper: Processing books page 50: https://books.toscrape.com/catalogue/page-50.html
-2026-10-06 19:55:53,485 INFO __main__: Collected 1000 raw records from Books to Scrape
-2026-10-06 19:55:54,912 INFO scrapers.quotes_scraper: Processing quotes page 1: https://quotes.toscrape.com/
-2026-10-06 19:55:55,847 INFO scrapers.quotes_scraper: Processing quotes page 2: https://quotes.toscrape.com/page/2/
-2026-10-06 19:55:56,711 INFO scrapers.quotes_scraper: Processing quotes page 3: https://quotes.toscrape.com/page/3/
-2026-10-06 19:55:57,566 INFO scrapers.quotes_scraper: Processing quotes page 4: https://quotes.toscrape.com/page/4/
-2026-10-06 19:55:58,412 INFO scrapers.quotes_scraper: Processing quotes page 5: https://quotes.toscrape.com/page/5/
-2026-10-06 19:55:59,259 INFO scrapers.quotes_scraper: Processing quotes page 6: https://quotes.toscrape.com/page/6/
-2026-10-06 19:56:00,174 INFO scrapers.quotes_scraper: Processing quotes page 7: https://quotes.toscrape.com/page/7/
-2026-10-06 19:56:01,011 INFO scrapers.quotes_scraper: Processing quotes page 8: https://quotes.toscrape.com/page/8/
-2026-10-06 19:56:01,936 INFO scrapers.quotes_scraper: Processing quotes page 9: https://quotes.toscrape.com/page/9/
-2026-10-06 19:56:02,888 INFO scrapers.quotes_scraper: Processing quotes page 10: https://quotes.toscrape.com/page/10/
-2026-10-06 19:56:02,891 INFO __main__: Collected 100 raw records from Quotes to Scrape
-2026-10-06 19:56:02,925 INFO __main__: Finished: 1099 final records, 0 rejected, 1 duplicates
+2026-10-06 21:55:02,792 INFO scrapers.books_scraper: Processing books page 1: https://books.toscrape.com/
+2026-10-06 21:55:03,955 INFO scrapers.books_scraper: Processing books page 2: https://books.toscrape.com/catalogue/page-2.html
+2026-10-06 21:55:05,281 INFO scrapers.books_scraper: Processing books page 3: https://books.toscrape.com/catalogue/page-3.html
+2026-10-06 21:55:06,431 INFO scrapers.books_scraper: Processing books page 4: https://books.toscrape.com/catalogue/page-4.html
+2026-10-06 21:55:07,675 INFO scrapers.books_scraper: Processing books page 5: https://books.toscrape.com/catalogue/page-5.html
+2026-10-06 21:55:08,838 INFO scrapers.books_scraper: Processing books page 6: https://books.toscrape.com/catalogue/page-6.html
+2026-10-06 21:55:10,009 INFO scrapers.books_scraper: Processing books page 7: https://books.toscrape.com/catalogue/page-7.html
+2026-10-06 21:55:11,187 INFO scrapers.books_scraper: Processing books page 8: https://books.toscrape.com/catalogue/page-8.html
+2026-10-06 21:55:12,479 INFO scrapers.books_scraper: Processing books page 9: https://books.toscrape.com/catalogue/page-9.html
+2026-10-06 21:55:13,751 INFO scrapers.books_scraper: Processing books page 10: https://books.toscrape.com/catalogue/page-10.html
+2026-10-06 21:55:14,934 INFO scrapers.books_scraper: Processing books page 11: https://books.toscrape.com/catalogue/page-11.html
+2026-10-06 21:55:16,146 INFO scrapers.books_scraper: Processing books page 12: https://books.toscrape.com/catalogue/page-12.html
+2026-10-06 21:55:17,332 INFO scrapers.books_scraper: Processing books page 13: https://books.toscrape.com/catalogue/page-13.html
+2026-10-06 21:55:18,550 INFO scrapers.books_scraper: Processing books page 14: https://books.toscrape.com/catalogue/page-14.html
+2026-10-06 21:55:19,714 INFO scrapers.books_scraper: Processing books page 15: https://books.toscrape.com/catalogue/page-15.html
+2026-10-06 21:55:20,869 INFO scrapers.books_scraper: Processing books page 16: https://books.toscrape.com/catalogue/page-16.html
+2026-10-06 21:55:22,075 INFO scrapers.books_scraper: Processing books page 17: https://books.toscrape.com/catalogue/page-17.html
+2026-10-06 21:55:23,304 INFO scrapers.books_scraper: Processing books page 18: https://books.toscrape.com/catalogue/page-18.html
+2026-10-06 21:55:24,481 INFO scrapers.books_scraper: Processing books page 19: https://books.toscrape.com/catalogue/page-19.html
+2026-10-06 21:55:25,650 INFO scrapers.books_scraper: Processing books page 20: https://books.toscrape.com/catalogue/page-20.html
+2026-10-06 21:55:26,831 INFO scrapers.books_scraper: Processing books page 21: https://books.toscrape.com/catalogue/page-21.html
+2026-10-06 21:55:27,990 INFO scrapers.books_scraper: Processing books page 22: https://books.toscrape.com/catalogue/page-22.html
+2026-10-06 21:55:29,274 INFO scrapers.books_scraper: Processing books page 23: https://books.toscrape.com/catalogue/page-23.html
+2026-10-06 21:55:30,445 INFO scrapers.books_scraper: Processing books page 24: https://books.toscrape.com/catalogue/page-24.html
+2026-10-06 21:55:31,675 INFO scrapers.books_scraper: Processing books page 25: https://books.toscrape.com/catalogue/page-25.html
+2026-10-06 21:55:32,949 INFO scrapers.books_scraper: Processing books page 26: https://books.toscrape.com/catalogue/page-26.html
+2026-10-06 21:55:34,152 INFO scrapers.books_scraper: Processing books page 27: https://books.toscrape.com/catalogue/page-27.html
+2026-10-06 21:55:35,350 INFO scrapers.books_scraper: Processing books page 28: https://books.toscrape.com/catalogue/page-28.html
+2026-10-06 21:55:36,635 INFO scrapers.books_scraper: Processing books page 29: https://books.toscrape.com/catalogue/page-29.html
+2026-10-06 21:55:37,912 INFO scrapers.books_scraper: Processing books page 30: https://books.toscrape.com/catalogue/page-30.html
+2026-10-06 21:55:39,197 INFO scrapers.books_scraper: Processing books page 31: https://books.toscrape.com/catalogue/page-31.html
+2026-10-06 21:55:40,363 INFO scrapers.books_scraper: Processing books page 32: https://books.toscrape.com/catalogue/page-32.html
+2026-10-06 21:55:41,520 INFO scrapers.books_scraper: Processing books page 33: https://books.toscrape.com/catalogue/page-33.html
+2026-10-06 21:55:42,709 INFO scrapers.books_scraper: Processing books page 34: https://books.toscrape.com/catalogue/page-34.html
+2026-10-06 21:55:43,990 INFO scrapers.books_scraper: Processing books page 35: https://books.toscrape.com/catalogue/page-35.html
+2026-10-06 21:55:45,170 INFO scrapers.books_scraper: Processing books page 36: https://books.toscrape.com/catalogue/page-36.html
+2026-10-06 21:55:46,359 INFO scrapers.books_scraper: Processing books page 37: https://books.toscrape.com/catalogue/page-37.html
+2026-10-06 21:55:47,520 INFO scrapers.books_scraper: Processing books page 38: https://books.toscrape.com/catalogue/page-38.html
+2026-10-06 21:55:48,790 INFO scrapers.books_scraper: Processing books page 39: https://books.toscrape.com/catalogue/page-39.html
+2026-10-06 21:55:50,061 INFO scrapers.books_scraper: Processing books page 40: https://books.toscrape.com/catalogue/page-40.html
+2026-10-06 21:55:51,218 INFO scrapers.books_scraper: Processing books page 41: https://books.toscrape.com/catalogue/page-41.html
+2026-10-06 21:55:52,469 INFO scrapers.books_scraper: Processing books page 42: https://books.toscrape.com/catalogue/page-42.html
+2026-10-06 21:55:53,665 INFO scrapers.books_scraper: Processing books page 43: https://books.toscrape.com/catalogue/page-43.html
+2026-10-06 21:55:54,829 INFO scrapers.books_scraper: Processing books page 44: https://books.toscrape.com/catalogue/page-44.html
+2026-10-06 21:55:56,164 INFO scrapers.books_scraper: Processing books page 45: https://books.toscrape.com/catalogue/page-45.html
+2026-10-06 21:55:57,343 INFO scrapers.books_scraper: Processing books page 46: https://books.toscrape.com/catalogue/page-46.html
+2026-10-06 21:55:58,555 INFO scrapers.books_scraper: Processing books page 47: https://books.toscrape.com/catalogue/page-47.html
+2026-10-06 21:55:59,729 INFO scrapers.books_scraper: Processing books page 48: https://books.toscrape.com/catalogue/page-48.html
+2026-10-06 21:56:00,950 INFO scrapers.books_scraper: Processing books page 49: https://books.toscrape.com/catalogue/page-49.html
+2026-10-06 21:56:02,227 INFO scrapers.books_scraper: Processing books page 50: https://books.toscrape.com/catalogue/page-50.html
+2026-10-06 21:56:02,237 INFO __main__: Collected 1000 raw records from Books to Scrape
+2026-10-06 21:56:03,832 INFO scrapers.quotes_scraper: Processing quotes page 1: https://quotes.toscrape.com/
+2026-10-06 21:56:04,686 INFO scrapers.quotes_scraper: Processing quotes page 2: https://quotes.toscrape.com/page/2/
+2026-10-06 21:56:05,575 INFO scrapers.quotes_scraper: Processing quotes page 3: https://quotes.toscrape.com/page/3/
+2026-10-06 21:56:06,541 INFO scrapers.quotes_scraper: Processing quotes page 4: https://quotes.toscrape.com/page/4/
+2026-10-06 21:56:07,499 INFO scrapers.quotes_scraper: Processing quotes page 5: https://quotes.toscrape.com/page/5/
+2026-10-06 21:56:08,347 INFO scrapers.quotes_scraper: Processing quotes page 6: https://quotes.toscrape.com/page/6/
+2026-10-06 21:56:09,216 INFO scrapers.quotes_scraper: Processing quotes page 7: https://quotes.toscrape.com/page/7/
+2026-10-06 21:56:10,058 INFO scrapers.quotes_scraper: Processing quotes page 8: https://quotes.toscrape.com/page/8/
+2026-10-06 21:56:10,899 INFO scrapers.quotes_scraper: Processing quotes page 9: https://quotes.toscrape.com/page/9/
+2026-10-06 21:56:11,744 INFO scrapers.quotes_scraper: Processing quotes page 10: https://quotes.toscrape.com/page/10/
+2026-10-06 21:56:11,748 INFO __main__: Collected 100 raw records from Quotes to Scrape
+2026-10-06 21:56:11,812 INFO __main__: Finished: 1099 final records, 0 rejected, 1 duplicates
